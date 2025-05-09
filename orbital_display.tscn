@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlp7ecevwcuc3"]
+
+[ext_resource type="Script" path="res://orbital_path.gd" id="1_cp0b0"]
+
+[sub_resource type="Curve2D" id="Curve2D_2w47q"]
+_data = {
+"points": PackedVector2Array(-113.871, -41.9526, 113.871, 41.9526, -64, 712, 0, 0, 0, 0, 192, 648, -73.4171, 143.837, 73.4171, -143.837, 384, 448, 0, 0, 0, 0, 448, 200, 104.882, 43.4509, -104.882, -43.4509, 336, 48, 0, 0, 0, 0, 96, 112, 79.4103, -113.871, -79.4103, 113.871, -48, 272, 0, 0, 0, 0, -136, 552, -79.4103, -46.4475, 79.4103, 46.4475, -64, 712)
+}
+point_count = 9
+
+[node name="OrbitalDisplay" type="Node2D"]
+position = Vector2(40, 184)
+
+[node name="OrbitalPath" type="Path2D" parent="."]
+rotation = -0.375246
+skew = 0.71733
+curve = SubResource("Curve2D_2w47q")
+script = ExtResource("1_cp0b0")
+
+[node name="Visual" type="Line2D" parent="OrbitalPath"]
+scale = Vector2(1, 1)
+width = 4.0
+
+[node name="PathFollow2D" type="PathFollow2D" parent="OrbitalPath"]
+position = Vector2(-64, 712)
+rotation = 0.35299
+rotates = false
+
+[node name="Label" type="Label" parent="OrbitalPath/PathFollow2D"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "MP3 TEST FILE.mp3"
