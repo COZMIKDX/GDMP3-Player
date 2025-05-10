@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cclb5dcj1q1dl"]
+
+[ext_resource type="FontFile" uid="uid://du6e1oc40al31" path="res://Magero.ttf" id="1_4v411"]
+[ext_resource type="Script" path="res://music_label.gd" id="1_cylfh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3des6"]
+font = ExtResource("1_4v411")
+font_size = 56
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7famh"]
+font = ExtResource("1_4v411")
+font_size = 22
+font_color = Color(0.212716, 1, 0.232653, 1)
+
+[node name="MusicLabel" type="Node2D"]
+script = ExtResource("1_cylfh")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 24.0
+offset_right = 199.0
+offset_bottom = 40.0
+text = "Empty"
+label_settings = SubResource("LabelSettings_3des6")
+
+[node name="ExtensionLabel" type="Label" parent="."]
+texture_filter = 1
+offset_top = 40.0
+offset_right = 43.0
+offset_bottom = 63.0
+rotation = -1.5708
+text = "mp3"
+label_settings = SubResource("LabelSettings_7famh")

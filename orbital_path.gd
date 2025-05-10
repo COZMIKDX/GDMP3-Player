@@ -3,8 +3,7 @@ extends Path2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var pointsArray = curve.get_baked_points()
-	$Visual.points = pointsArray
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
