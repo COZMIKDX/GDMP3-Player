@@ -12,6 +12,8 @@ point_count = 9
 [node name="OrbitalDisplay" type="Node2D"]
 position = Vector2(176, 48)
 script = ExtResource("1_siyhc")
+scrollAccel = null
+scrollDecel = null
 
 [node name="Visual" type="Line2D" parent="."]
 skew = 0.47822
@@ -24,14 +26,3 @@ script = ExtResource("1_cp0b0")
 
 [node name="Labels" type="Node2D" parent="."]
 position = Vector2(-391.662, 632.125)
-
-[node name="Button" type="Button" parent="."]
-offset_left = 640.0
-offset_top = 80.0
-offset_right = 714.0
-offset_bottom = 111.0
-text = "scroll up"
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

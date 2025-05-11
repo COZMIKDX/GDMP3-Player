@@ -35,6 +35,8 @@ func updateFilesList(dir):
 		load_audio()
 	else: 
 		updateTitleDisplay("No audio files in directory.")
+		
+	$OrbitalDisplay.batch_add_label(audioFilesList)
 
 func load_mp3(path):
 	var file = FileAccess.open(path, FileAccess.READ)
